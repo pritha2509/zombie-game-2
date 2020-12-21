@@ -101,10 +101,7 @@ function draw() {
   text("AMMO : " + ammo , player.x , player.y - 200);
 
   if(gameState === "INSTRUCTIONS"){
-    text("Kill 50 Zombies to lure the boss zombie.You have 50 bullets to do so." , displayWidth/2,25);
-    text("Once you find the boss zombie , kill it and escape with the helicopter in the given time", displayWidth/2,75);
-    text("Press UP ARROW to start" , displayWidth/2,135);
-    text("TIP : Aim at Zombies' head. " , displayWidth/2,110)
+    
     if(keyIsDown(UP_ARROW)){
       gameState = "PLAY";
     }
@@ -166,9 +163,6 @@ if(gameState === "EXTEND"){
   stroke("BLACK");
   strokeWeight(7);
   textSize(12);
-  text("KILL THE BOSS ZOMBIE & REACH THE HELICOPTER TO WIN",displayWidth/2 , 100);
-  text("TIME LEFT : " + timer , player.x , player.y + 100);
-  helicopter.visible = true;
   bossZombie.visible = true;
   bossZombie.velocityX = -0.5;
   if(zombieGroup.isTouching(player)){
